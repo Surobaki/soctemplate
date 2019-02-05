@@ -2,8 +2,9 @@
 \ProvidesClass{socthesissk}[2018/01/27 Document class for Slovak SOC theses]
 \LoadClass[11pt, a4paper, oneside]{book}
 
+\RequirePackage[left=35mm, right=25mm, top=25mm, bottom=25mm]{geometry}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[slovak]{babel}
+\RequirePackage[english, slovak]{babel}
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
 \RequirePackage{array}
@@ -25,11 +26,12 @@
 
 \setlength{\intextsep}{5mm} % nastavenie medzery okolo obrázkov
 \marginparsep=15pt
-\linespread{1.3}
+% \linespread{1.3}
+\renewcommand{\baselinestretch}{1.5}
 \unitlength=1mm % nastavenie voľby jednotiek
 
 %%%%%% ROVNICE
-\DeclareCaptionType{listedequation}[Rovnice][Zoznam rovníc]
+\DeclareCaptionType{listedequation}[Rovnica][Zoznam rovníc]
 % \captionsetup[listedequation]{labelformat = parens}
 
 %% hyperref \autoref názvy
@@ -126,7 +128,7 @@
         \begin{table}[h]
         \setlength{\tabcolsep}{12pt}
         \renewcommand{\arraystretch}{1.5}
-        \linespread{1.0}
+        % \linespread{1.0}
 		\begin{tabularx}{\textwidth}{r >{\raggedright}p{90mm} c}
 		\large{\B{AUTOR}} & \large{\B{\@author}} & \\
 		\large{\B{ŠKOLA}} & \large{\B{\@school}} & \\
